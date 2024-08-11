@@ -1,0 +1,22 @@
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -H "code: apicode" \
+  -d '{
+    "query": "Time Entry on Behalf of Consultant",
+    "model": "gpt-4",
+    "search_type": "similarity",
+    "tenant": "DEMO",
+    "chain_type": "stuff",
+    "system_template": "Your name is Ask PMO, and you work for an Orgzanization as a Program Manager. Answer only based on the context provided if there is no answer in the context say Poda",
+    "prompt_suffix": "",
+    "faiss_file": "godansudha",
+    "container": "knowledgebase"
+  }' \
+  http://127.0.0.1:5000/knowledgebasequery
+
+
+
+  python3 -m venv env -- where env is the name of the virtual environment
+  source env/bin/activate -- To activate a virtual environment
+  pip3 install -r requirements.txt -- to install from a requirements.txt file
+https://askpmo.azurewebsites.net/api/askpmo?code=hKAg9KysVDjADecRMrc4IkF-zIkyItOwC0F_WTTfzNKrAzFuqPxRWA%3D%3D&name=Godan
